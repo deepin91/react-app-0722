@@ -39,6 +39,8 @@ function Counter({ title, initValue }) {
           // setStep(e.target.value);를 그냥 쓰면 문자열이라 ㄴㄴ임 위 같이 써서 숫자로 바꿔줌
         }}
       />
+      {/*함수 부분 드래그 후 전구모양 우클릭  > 이너펑션 클릭 하면 함수 따로 빼서 정의됨?*/}
+
       <button onClick={up}>+</button>
       <br />
       {/* <button onClick={minus10}>-10</button>
