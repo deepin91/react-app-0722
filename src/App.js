@@ -1,30 +1,32 @@
-import './App.css';
-import { useState } from 'react';
+import "./App.css";
+import { useState } from "react";
 
-function Counter(props){
+function Counter(props) {
   let countState = useState(props.initValue); //let 지역변수
   let count = countState[0];
   let setCount = countState[1];
 
-  let countState2 = useState(props.initValue)
+  let countState2 = useState(props.initValue);
   let countDown = countState2[0];
   let setCountDown = countState2[1];
   console.log(countState);
-  function up(){
+  function up() {
     console.log(countState);
     setCount(count + 1);
   }
-  function down(){
+  function down() {
     setCountDown(count - 1);
   }
-  /* console.log(props);  자바스크립트 에서는 콘솔에 props(매개변수)값이 찍히게 함*/ 
-  return <div>
-    {/* <h1>카운터</h1>  - 텍스트가 아닌 함수형으로 불러오려면 */}
-    <h1>{props.title}</h1>
-    {/* <button onClick={up}>+</button> {props.initValue} 사용자 정의 내 컴포넌트 속성 불러오는 방법 */}
-    <button onClick={up}>+</button> {count}
-    <button onClick={down}>-</button> {countDown}
-  </div>
+  /* console.log(props);  자바스크립트 에서는 콘솔에 props(매개변수)값이 찍히게 함*/
+  return (
+    <div>
+      {/* <h1>카운터</h1>  - 텍스트가 아닌 함수형으로 불러오려면 */}
+      <h1>{props.title}</h1>
+      {/* <button onClick={up}>+</button> {props.initValue} 사용자 정의 내 컴포넌트 속성 불러오는 방법 */}
+      <button onClick={up}>+</button> {count}
+      <button onClick={down}>-</button> {countDown}
+    </div>
+  );
 }
 
 function App() {
